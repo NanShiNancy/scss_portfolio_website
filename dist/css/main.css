@@ -1,3 +1,30 @@
+.btn-main, .btn-light, .btn-medium, .btn-dark {
+  padding: 0.8rem 2rem;
+  display: inline-block;
+  transition: all 0.5s;
+  border: none;
+  cursor: pointer; }
+
+.btn-main {
+  background-color: #ffbc00;
+  color: #333; }
+
+.btn-light {
+  background-color: #f4f4f4;
+  color: #333; }
+
+.btn-medium {
+  background-color: #ccc;
+  color: #333; }
+
+.btn-dark {
+  background-color: #333;
+  color: #333; }
+
+.lead {
+  font-size: 1.3rem;
+  margin-bottom: 2rem; }
+
 * {
   margin: 0;
   padding: 0; }
@@ -43,6 +70,10 @@ img {
     border-bottom: 3px transparent solid;
     padding-bottom: 0.5rem;
     transition: border-color 0.5s; }
+    #main-nav a:hover {
+      border-color: #ccc; }
+    #main-nav a.current {
+      border-color: #ffbc00; }
 
 #header-home {
   background: url("../img/showcase.jpg") no-repeat center right/cover;

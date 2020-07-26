@@ -1,0 +1,41 @@
+//Buttons
+%btn-shared {
+  padding: 0.8rem 2rem;
+  display: inline-block;
+  transition: all 0.5s;
+  border: none;
+  cursor: pointer;
+}
+
+.btn {
+  &-main {
+    @extend %btn-shared;
+    background-color: $main-color;
+    color: #333;
+  }
+
+  &-light {
+    @extend %btn-shared;
+    background-color: $light-color;
+    color: #333;
+  }
+
+  &-medium {
+    @extend %btn-shared;
+    background-color: $medium-color;
+    color: #333;
+  }
+
+  &-dark {
+    @extend %btn-shared;
+    background-color: $dark-color;
+    color: #333;
+  }
+
+
+}
+
+.lead {
+  font-size: 1.3rem;
+  margin-bottom: 2rem;
+}
