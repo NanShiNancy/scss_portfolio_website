@@ -1,5 +1,6 @@
 @import "config";
 @import "utilitis";
+@import "item_grid";
 
 //General Styles
 * {
@@ -94,7 +95,11 @@ img {
 		}
 	}
 
-	&-inner {}
+	&-inner {
+		background: $bg-image no-repeat 20% 30% / cover;
+		height: 5.5rem;
+		border-bottom: solid 3px $main-color;
+	}
 }
 
 //Home sections
@@ -200,6 +205,170 @@ img {
 	}
 }
 
+
+// About sections
+#about {
+	&-a {
+		.about-info {
+			display: grid;
+			grid-template-areas:
+				'bioimage bio bio'
+				'aw1 aw2 aw3';
+			grid-gap: 1.2rem;
+		}
+
+		//Grid area
+		.bio-image {
+			grid-area: bioimage;
+		}
+
+		.bio {
+			grid-area: bio;
+			border-left: 3px solid $main-color;
+			padding: 0.8rem;
+		}
+
+		.award-1 {
+			grid-area: aw1;
+		}
+
+		.award-2 {
+			grid-area: aw2;
+		}
+
+		.award-3 {
+			grid-area: aw3;
+		}
+
+		.award-1 .fas,
+		.award-2 .fas,
+		.award-3 .fas {
+			color: $main-color;
+			margin: 1rem;
+		}
+	}
+
+	// About B
+	&-b {
+		.progress {
+			overflow: hidden;
+			height: 20px;
+			background: $medium-color;
+			border-radius: 5px;
+			margin-bottom: 0.6rem;
+
+			div {
+				height: 100%;
+				color: #fff;
+				text-align: center;
+				background: $main-color;
+			}
+		}
+	}
+
+	&-c {
+		.about-logos {
+			display: grid;
+			grid-template-columns: repeat(4, 1fr);
+			grid-gap: 2rem;
+
+			img {
+				width: 70%;
+			}
+		}
+	}
+
+	&-d {
+		.testimonials {
+			display: grid;
+			grid-template-columns: repeat(4, 1fr);
+			grid-gap: 1rem;
+
+			ul {
+				align-items: center;
+				list-style: none;
+				display: flex;
+				margin-top: 0.5rem;
+			}
+
+			p {
+				border: 1px solid $medium-color;
+				border-radius: 5px;
+				padding: 0.5rem;
+			}
+
+			img {
+				height: 50px;
+				width: 50px;
+				border-radius: 50%;
+				margin-right: 0.5rem;
+			}
+		}
+
+	}
+}
+
+// Contact page
+#contact {
+	&-a {
+		.text-fields {
+			display: grid;
+			grid-template-areas:
+				'name email'
+				'subject phone'
+				'message message';
+			grid-gap: 1.2rem;
+			margin-bottom: 1.2rem;
+
+			.name-input {
+				grid-area: name;
+			}
+
+			.email-input {
+				grid-area: email;
+			}
+
+			.subject-input {
+				grid-area: subject;
+			}
+
+			.phone-input {
+				grid-area: phone;
+			}
+
+			.messate-input {
+				grid-area: message;
+				height: 100px;
+			}
+
+			.text-input {
+				padding: 0.5rem 1rem;
+			}
+		}
+
+		.button[type='submit'] {
+			width: 50px;
+
+		}
+	}
+
+	&-b {
+		.contact-info {
+			display: grid;
+			grid-template-columns: repeat(3, 1fr);
+			text-align: center;
+		}
+	}
+
+	&-c {
+		h1 {
+			text-align: center;
+			font-size: 4rem;
+			;
+		}
+	}
+}
+
 // Footter
 #main-footer {
 	background: $dark-color;
@@ -228,3 +397,6 @@ img {
 		}
 	}
 }
+
+// Import media
+@import 'media';
